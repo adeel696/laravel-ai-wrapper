@@ -1,6 +1,6 @@
 <?php
 
-namespace adeel696\AiWrapper\Contracts;
+namespace Adeel696\AiWrapper\Contracts;
 
 use Illuminate\Http\UploadedFile;
 

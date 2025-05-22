@@ -1,12 +1,12 @@
 <?php
 
-namespace adeel696\AiWrapper;
+namespace Adeel696\AiWrapper;
  
 
-use adeel696\AiWrapper\Contracts\AiProviderInterface;
-use adeel696\AiWrapper\Providers\OpenAiProvider;
-use adeel696\AiWrapper\Providers\ClaudeProvider;
-use adeel696\AiWrapper\Providers\GeminiProvider;
+use Adeel696\AiWrapper\Contracts\AiProviderInterface;
+use Adeel696\AiWrapper\Providers\OpenAiProvider;
+use Adeel696\AiWrapper\Prsoviders\ClaudeProvider;
+use Adeel696\AiWrapper\Providers\GeminiProvider;
 
 class AiManager implements AiProviderInterface
 {

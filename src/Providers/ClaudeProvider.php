@@ -1,8 +1,8 @@
 <?php
 
-namespace adeel696\AiWrapper\Providers;
+namespace Adeel696\AiWrapper\Providers;
 
-use adeel696\AiWrapper\Contracts\AiProviderInterface;
+use Adeel696\AiWrapper\Contracts\AiProviderInterface;
 use Illuminate\Support\Facades\Http;
 
 class ClaudeProvider implements AiProviderInterface

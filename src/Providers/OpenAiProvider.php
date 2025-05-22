@@ -1,8 +1,8 @@
 <?php
 
-namespace adeel696\AiWrapper\Providers;
+namespace Adeel696\AiWrapper\Providers;
 
-use adeel696\AiWrapper\Contracts\AiProviderInterface;
+use Adeel696\AiWrapper\Contracts\AiProviderInterface;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Http;
 
@@ -17,7 +17,6 @@ class OpenAiProvider implements AiProviderInterface
 
     public function chat(string $prompt, array $options = []): string
     {
-        return 111;
         $response = Http::withToken(config('ai.providers.openai.api_key'))
             ->post('https://api.openai.com/v1/chat/completions', [
                 'model' => $this->model,

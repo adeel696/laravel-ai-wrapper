@@ -1,10 +1,10 @@
 <?php
 
-namespace adeel696\AiWrapper;
+namespace Adeel696\AiWrapper;
 
 use Illuminate\Support\ServiceProvider;
-use adeel696\AiWrapper\Contracts\AiProviderInterface;
-use adeel696\AiWrapper\Providers\OpenAiProvider;
+use Adeel696\AiWrapper\Contracts\AiProviderInterface;
+use Adeel696\AiWrapper\Providers\OpenAiProvider;
 
 class AiWrapperServiceProvider extends ServiceProvider
 {
