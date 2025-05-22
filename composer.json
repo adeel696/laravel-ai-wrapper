@@ -1,0 +1,20 @@
+{
+  "name": "adeel696/ai-wrapper",
+  "description": "A Laravel AI Wrapper",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Adeel696\\AiWrapper\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Adeel696\\AiWrapper\\AiWrapperServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
