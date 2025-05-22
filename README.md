@@ -16,15 +16,18 @@
 ---
 
 ## 📦 Installation
-
+```bash
 composer require adeel696/ai-wrapper
+```
 
-⚙️ Configuration & 🧪 Usage
-
+## ⚙️ Configuration  & 🧪 Usage
+```bash
 php artisan vendor:publish --tag=config
+```
 
 Update config/ai.php as needed:
 
+```bash
 return [
 
     'default_provider' => 'openai',
@@ -42,60 +45,61 @@ return [
         'gemini' => ['default' => 'gemini-pro'],
     ],
 ];
+```
 
 In your .env file, add the relevant API keys:
-
+```bash
 OPENAI_API_KEY=your-openai-api-key
 ANTHROPIC_API_KEY=your-anthropic-api-key
 GOOGLE_AI_API_KEY=your-google-api-key
-
+```
 
 ## Imoprt and Initialize
-
-use Adeel696\AiWrapper\AiManager;
+```bash
+use adeel696\AiWrapper\AiManager;
 
 $ai = new AiManager();
+```
 
-
-3. Usage Examples
+Usage Examples
 
 🔁 Set Provider and Model (Optional)
+```bash
 $ai->setProvider('claude')->setModel('claude-3-opus-20240229');
+```
 
 💬 Chat (Default Provider)
+```bash
 $response = $ai->chat("Tell me about Laravel.");
 echo $response;
+```
 
 📄 Summarize Text
+```bash
 $text = "Laravel is a PHP framework designed for web artisans...";
 echo $ai->summarize($text);
+```
 
 🌐 Translate Text
+```bash
 echo $ai->translate("How are you?", "es");
+```
 
 🧠 Embed Text (for semantic search)
+```bash
 $vector = $ai->embed("What is AI?");
 print_r($vector);
+```
 
 🎧 Transcribe Audio
+```bash
 $response = $ai->transcribeAudio(storage_path('audio/voice.mp3'));
 echo $response;
+```
 
 🧩 Stream Output (if supported by provider)
+```bash
 $ai->stream("Tell me a joke.", function ($chunk) {
     echo $chunk;
 });
-
-🧰 Available Methods
-Method	Description
-chat()	            Chat completion from AI model
-complete()	        Standard text completion
-summarize()	        Summarize long text input
-translate()	        Translate text to another language
-embed()	            Get vector embedding of a prompt
-moderate()	        Run moderation check on text
-generateImage()	    Generate image from a text prompt
-transcribeAudio()	Transcribe audio file to text
-analyzeFile()	    Analyze content from uploaded file
-functionCall()	    Perform structured function call (OpenAI)
-stream()	        Stream AI response in real-time
+```
