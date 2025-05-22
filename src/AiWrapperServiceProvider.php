@@ -24,7 +24,7 @@ class AiWrapperServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/aiwrapper.php' => config_path('ai.php'),
+            __DIR__.'/../config/aiwrapper.php' => config_path('aiwrapper.php'),
         ]);
     }
 }
