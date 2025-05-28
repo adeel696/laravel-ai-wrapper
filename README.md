@@ -54,7 +54,7 @@ ANTHROPIC_API_KEY=your-anthropic-api-key
 GOOGLE_AI_API_KEY=your-google-api-key
 ```
 
-## Imoprt and Initialize
+## Import and Initialize
 ```bash
 use adeel696\AiWrapper\AiManager;
 
